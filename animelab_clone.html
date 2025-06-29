@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #header{
+            /* border: 2px solid rgb(93, 0, 214); */
+            background-color: rgb(80, 0, 184);
+            padding-left: 60px;
+            box-shadow: 1px 8px 30px rgba(0, 0, 0, 0.788);
+            position: sticky;
+            /* opacity: 60%; */
+            top: 0;
+        }
+
+        .category{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            color: #c3a5c3;
+            font-family: sans-serif, verdana;
+            margin-right: 35px;
+            
+            
+        }
+
+        a:link, a:visited{
+            color: #c3a5c3;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: #ffff;
+            text-decoration: none;
+        }
+
+
+        .signup{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            color: #000000e0;
+            font-family: sans-serif, verdana;
+            margin-right: 35px;
+            margin-left: 350px;
+            border: 2px solid #ffbc00;;
+            border-radius: 20px;
+            padding: 5px 15px;
+            background-color: #ffbc00;
+            cursor: pointer;
+            
+        }
+
+        .signup:hover{
+            background-color:  #ffc933;
+            box-shadow: 0 0 10px 0 #ffbc00;
+
+        }
+
+        .signin{
+            display: inline-block;  
+            vertical-align: middle;
+            font-size: 14px;
+            color: #c3a5c3 ;
+            font-family: sans-serif, verdana;
+            margin-right: 35px;
+            cursor: pointer;
+        }
+
+
+        .anime_title_box{
+            /* border: 2px solid #3b0087; */
+            background-color: #3b0087;
+            height: 311px;
+            width: 100%;
+            background-image: url(//0c86e2d1-madman-com-au.akamaized.net/shows/sands-of-destruction_portrait-key-art-normal-medium_65234.jpeg);                                                                                        
+            background-size: 340px 560px;
+            background-repeat: no-repeat;
+            background-position: 100px 55px;
+            
+
+        }
+
+        .anime_description_box{
+            /* border: 2px solid blue;   */
+            background-color: #340177;
+            height: 400px;
+            width: 100%;
+            background-image: url(//0c86e2d1-madman-com-au.akamaized.net/shows/sands-of-destruction_portrait-key-art-normal-medium_65234.jpeg);
+            background-size: 340px 560px;
+            background-repeat: no-repeat;
+            background-position: 100px -257px;
+            
+
+        }
+
+        .anime_title{
+            font-style: normal;
+            font-family: verdana, sans-serif;
+            font-size: 50px;
+            margin-left: 470px;
+            /* border: 1px solid red; */
+            color: #ffff;
+            
+        }
+
+        .name{
+            width: 100%;    
+            height: 180px;
+            /* border: 2px solid black; */
+            float: right;
+            padding-top: 130px;
+            /* padding-left: 200px; */
+            color: #ffff;
+
+        }
+
+        .anime_info{
+            display: inline-block;
+            margin-right: 30px;
+            font-size: 18px;
+            font-family: verdana, sans-serif;
+            padding-top: 10px;
+            /* padding-left    : 500px; */
+            /* color: #ffff; */
+
+        }
+
+        .info{
+            width: 34%;
+            padding-left: 480px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            /* border: 2px solid violet; */
+
+        }
+
+        .age_restriction{
+            display: inline-block;
+            font-size: 14px;
+            font-family: verdana, sans-serif;
+            padding-right: 60px;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+
+        .pg{
+            border: 1px solid rgb(255, 123, 0);
+            background-color: rgb(255, 123, 0);
+            border-radius: 10px;
+            margin-right: 10px;  
+            font-size: 14px;
+            font-family: verdana, sans-serif;
+            padding-left: 2px;
+            color: blue;
+            
+        }
+
+        .description1{
+            color: white;
+            font-size: 18px;
+            font-family: verdana, sans-serif;
+            padding-right: 60px;
+            padding-top: 130px;
+            padding-left: 470px;
+            
+        }
+
+        .description2{
+            color: rgb(171, 138, 248);
+            font-size: 15px;
+            font-family: verdana, sans-serif;
+            padding-right: 60px;
+            padding-top: 25px;
+            padding-left: 470px;
+        }
+
+        .genre1{
+            color: white;
+            font-size: 18px;
+            font-family: verdana, sans-serif;
+            margin-right: 40px;
+            margin-top: 15px;
+            margin-left: 470px;
+            font-size: 16px;
+            display: inline-block;
+            border: 1px solid white;
+            padding: 2px 10px;
+            border-radius: 12px;
+
+        }
+
+        .genre2{
+            color: white;
+            font-size: 18px;
+            font-family: verdana, sans-serif;
+            margin-right: 40px;
+            font-size: 16px;
+            display: inline-block;
+            border: 1px solid white;
+            padding: 2px 10px;
+            border-radius: 12px;
+
+        }
+
+        .genre3{
+            color: white;
+            font-size: 18px;
+            font-family: verdana, sans-serif;
+            font-size: 16px;
+            display: inline-block;
+            border: 1px solid white;
+            padding: 2px 10px;
+            border-radius: 12px;
+
+        }
+
+        .genre1:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .genre2:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .genre3:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .description_box{
+            /* border: 2px solid green; */
+            padding: 20px;
+            background-color: #3b0087;
+          
+        }
+
+        .image-box{
+            height: 228px;
+            width: 21.4%;
+            border: 2px solid transparent;
+           background-image: url(//0c86e2d1-madman-com-au.akamaized.net/videoentries/sands-of-destruction-episode-1_S01E01_video-preview-large_82429.jpg);
+           background-repeat: no-repeat;
+           background-size: 280px;
+           /* background-position: 20px 20px; */
+           transition: transform 0.2s ease-in-out;
+           display: inline-block;
+           margin-right: 29px;
+        }
+
+        .image-box:hover{
+            transform: scale(1.1, 1.1);
+        }
+
+        .info-box{
+            /* border: 2px solid black; */
+            margin-top: 154px;
+            /* padding: 30px 0 20px 20px; */
+            
+        }
+
+        
+
+        .ep-number{
+            /* border: 2px solid blue; */
+            padding: 30px 90px 16px 20px;
+            color: rgba(255,255,255,.8);
+            font-size: 20px;
+            font-family: verdana, sans-serif;
+
+        }
+        
+        .ep-number:hover{
+            color: black;
+            background-color: white;
+            border-radius: 0 0 25px 25px;
+        }
+
+        .season-box{
+            /* border: 2px solid yellow; */
+            /* display: inline-block; */
+        }
+
+        #season1{
+            color: #ffffff;
+            font-size: 25px;
+            font-style: normal;
+            font-family: verdana, sans-serif;
+            padding: 25px 32px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+
+        }
+
+        #number-of-episodes{
+            float: right;
+            border: 1px solid white; 
+            border-radius: 20px; 
+            padding: 3px 8px;
+        }
+
+        #number-of-episodes:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        #ending-of-page{
+            padding: 50px;
+        }
+
+        .credits{
+            font-family: verdana, sans-serif;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 30px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+
+
+    </style>
+</head>
+<body >
+
+    <header>
+    <div id="header">
+
+        <img class="category" src="https://8b95e83a-madman-com-au.akamaized.net/assets/images/logos/logo-full-white.png" alt="logo" height="90px">
+
+        <a href="4anime.to" class="category"> Shows      </a>
+        <a href="4anime.to" class="category"> Simulcasts </a>
+        <a href="4anime.to" class="category"> Movies     </a>
+        <a href="4anime.to" class="category"> Genre      </a>
+
+        <b> <p class="signup"> Sign up for Animelab </p> </b>
+        <b> <a class="signin"> Sign In              </a> </b>
+
+    </div>
+</header>
+
+<!-- HALF IMAGE UP STARTS HERE -->
+
+<div class="anime_title_box" >
+
+    <div class="name">
+    <h1 class="anime_title"> Sands of Destruction </h1>
+
+        <div class="info">
+            <p class="anime_info"> 2008               </p>
+            <p class="anime_info"> 13 Episodes        </p>
+            <p class="anime_info"> English & Japanese </p>
+            <br>
+            <p class="age_restriction">   
+            <span class="pg"> M </span>
+             Recommended for mature audiences 15 years and over 
+            </p>
+
+        
+        </div>
+    </div>
+</div>
+
+<!-- HALF IMAGE DOWN STARTS HERE -->
+
+<div class="anime_description_box">
+
+<b>
+    <p class="description1">
+        The planet’s fate hangs in the balance, but these heroes would rather destroy the world than save it.
+    </p>
+
+</b>
+
+    <p class="description2">
+        Morte wants the world to pay for the death of her brother. That's where Kyrie comes in—he may hold the key to eradicating existence.
+    </p>
+
+    <p class="genre1"> Action    </p>
+    <p class="genre2"> Adventure </p>
+    <p class="genre3"> Fantasy   </p>
+
+
+</div>
+
+
+<!-- EPISODES STARTS FROM HERE -->
+
+<div class="description_box">
+    
+<div class="season-box"> 
+    <h2 id="season1"> Season 1 
+        <span id="number-of-episodes" > 13 </span>
+    </h2>
+    
+ </div>
+  
+     
+      <div class="image-box" style="margin-left: 30px;">
+          <div class="info-box">
+              <p class="ep-number"> Episode 1 </p>
+
+          </div>
+          
+
+      </div>
+      
+
+      <!-- 2nd episode -->
+
+      <div class="image-box" style="background-image: url(//0c86e2d1-madman-com-au.akamaized.net/videoentries/sands-of-destruction-episode-2_S01E02_video-preview-large_82433.jpg);">
+        <div class="info-box">
+            <p class="ep-number"> Episode 2 </p>
+
+        </div>
+        
+
+    </div>
+
+    <!-- 3RD EPISODES -->
+
+    <div class="image-box" style="background-image: url(//0c86e2d1-madman-com-au.akamaized.net/videoentries/sands-of-destruction-episode-3_S01E03_video-preview-large_82437.jpg);">
+        <div class="info-box">
+            <p class="ep-number"> Episode 3 </p>
+
+        </div>
+        
+
+    </div>
+
+    <!-- 4TH EPISODES -->
+
+    <div class="image-box" style="background-image: url(//0c86e2d1-madman-com-au.akamaized.net/videoentries/sands-of-destruction-episode-4_S01E04_video-preview-large_82441.jpg);">
+        <div class="info-box">
+            <p class="ep-number"> Episode 4 </p>
+
+        </div>
+        
+
+    </div>
+
+  </div>
+
+  </div>
+
+<footer>
+
+    <div id="ending-of-page">
+
+        <img class="credits" src="https://8b95e83a-madman-com-au.akamaized.net/assets/images/logos/logo-full-white-japanese.png" alt="logo" height="70px">
+
+        <p class="credits"> Browse              </p>
+        <p class="credits"> Devices             </p>
+        <p class="credits"> Plan                </p>
+        <p class="credits"> Redeem Gift Card    </p>
+        <p class="credits"> Advertising         </p>
+        <p class="credits"> Privacy Policy      </p>
+        <p class="credits"> T&C's               </p>
+        <p class="credits"> Blog                </p>
+        <p class="credits"> Jobs                </p>
+        <p class="credits"> Help                </p>
+        
+        
+
+        <img class="credits" src="https://i.pinimg.com/originals/3f/77/56/3f7756330cd418e46e642254a900a507.jpg" alt="logo" height="50px">
+
+        <img class="credits" src="https://img.icons8.com/metro/452/twitter.png" alt="logo" height="30px">
+
+        <img class="credits" src="https://i.pinimg.com/originals/b7/63/69/b763699fd1fa3bfb374442593ae642e1.png" alt="logo" height="40px">
+    
+        <p class="credits" style="font-size: 10px; margin-left: 200px;"> Brought to you by Madman Anime Group Pty Ltd. ABN 50 615 305 587. Level 2, 289 Wellington Parade South, East Melbourne, Victoria 3002, Australia. © AnimeLab ™ 2021 </p>
+
+    </div>
+
+</footer>
+
+
+
+
+
+
+    
+</body>
+</html>
